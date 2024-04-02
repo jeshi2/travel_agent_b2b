@@ -12,13 +12,16 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" 
+                name="email" :value="old('email')" required autofocus />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
+            <x-primary-button class="hover:bg-indigo-500 focus-visible:outline mx-auto
+                focus-visible:outline-2 bg-indigo-600 focus-visible:outline-offset-2 
+                focus-visible:outline-indigo-600">
+                {{ __('Request Password Reset') }}
             </x-primary-button>
         </div>
     </form>
