@@ -12,6 +12,24 @@
                     {{ __("You're logged in!") }}
                 </div>
             </div>
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                 <div>
+                    <h2>Rooms available for booking!</h2>
+                    <div class="row">
+                        @foreach($accommodations as $accommodations)
+                        <div class="col-md-4">
+                            <div class="mb-4 shadow-sm ">
+                                <img src="{{$accommodations->image}}">
+                                <div>
+                                    <h3>{{ $accommodations->room_name }}</h3>
+                                    <p>{{$accommodations->description }}</p>
+                                    <p>Price: {{ $accommodations->standard_rack_rate }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>   
+            </div>
         </div>
     </div>
 </x-app-layout>
