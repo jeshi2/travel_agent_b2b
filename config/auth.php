@@ -40,6 +40,17 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'api' => [
+            'driver' => 'token',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+    
+        'admin' => [
+            'driver' => 'session', // You can use 'token' if you prefer token-based authentication
+            'provider' => 'admins', // Use the provider for admins
+        ],
     ],
 
     /*
@@ -63,6 +74,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
+        ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class, // Specify the Admin model
         ],
 
         // 'users' => [
