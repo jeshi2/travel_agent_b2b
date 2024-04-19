@@ -6,10 +6,13 @@
     <div class="sidebar-wrapper">
             @include('admin.sidebar')
         </div>
-        <div>
-        <h1 class="text-purple-500">Admin Dashboard</h1>
+        <div id="content-container" class="ml-72 p-8">
+        <livewire:create-rooms />
+            <livewire:view-rooms />
         <!-- Add your dashboard content here -->
+        
         </div>
         
     </div>
+    
 @endsection

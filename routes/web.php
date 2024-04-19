@@ -41,9 +41,9 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
     Route::get('/view_rooms', [ViewRoomController::class, 'index'])->name('view_rooms.index');
     Route::get('/update_rooms', [UpdateRoomController::class, 'index'])->name('update_rooms.index');
     Route::get('/users', [UsersController::class, 'index'])->name('users.index');
-    Route::get('/settings', [SettingController::class, 'settings'])->name('settings.index');
+    Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
     Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
-    Route::get('/analytics', [AnalyticsController::class, 'traffic'])->name('analytics.index');
+    Route::get('/analytics', [AnalyticsController::class, 'index'])->name('analytics.index');
 });
 
 require __DIR__.'/auth.php';
