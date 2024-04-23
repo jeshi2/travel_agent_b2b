@@ -1,3 +1,3 @@
 <div>
-    {{-- Be like water. --}}
+    {{-- Be like water. --}}<h1>View rooms</h1>
 </div>

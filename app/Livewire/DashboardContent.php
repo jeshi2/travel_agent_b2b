@@ -6,12 +6,15 @@ use Livewire\Component;
 
 class DashboardContent extends Component
 {
-    public $component = 'CreateRooms'; // Default component
+    public $component; // Default component
 
     protected $listeners = ['changeComponent'];
 
     public function render()
     {
+        if (!$this->component) {
+            $this->component = 'CreateRooms';
+        }
         // Pass the current component name to the Livewire view
         return view('livewire.dashboard-content', [
             'component' => $this->component,
